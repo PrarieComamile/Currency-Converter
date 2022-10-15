@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doviz Hesaplama | Anlık Kur</title>
+    <link rel="stylesheet" href="/templates/style.css">
+</head>
+<body>
+    <table>
+        <tr>
+            <td id="doviz-1">
+                <h1>Doviz Hesaplama</h1>
+                <hr class="line-1">
+                <div class="t1">
+                    <form class="cevirme" method="post" action="/">
+                        <input type="number" class="input1" value="0" name="number1" method="post">
+                        <select name="doviz" id="doviz" method="post">
+                            <option value="_usd">ABD DOLARI</option>
+                            <option value="_tl">TÜRK LİRASI</option>
+                            <option value="_avustralya_dolar">AVUSTRALYA DOLARI</option>
+                            <option value="_danimarka_kron">DANİMARKA KRONU</option>
+                            <option value="_euro">EURO</option>
+                            <option value="_sterlin">İNGİLİZ STERLİNİ</option>
+                            <option value="_frang">İSVİÇRE FRANGI</option>
+                            <option value="_isvec_kron">İSVEÇ KRONU</option>
+                            <option value="_canada_dolar">KANADA DOLARI</option>
+                            <option value="_kuveyt_dinar">KUVEYT DİNARI</option>
+                            <option value="_norvec_kron">NORVEÇ KRONU</option>
+                            <option value="_arabistan_riyal">SUUDİ ARABİSTAN RİYALİ</option>
+                            <option value="_japon_yeni">100 JAPON YENİ</option>
+                            <option value="_rus_ruble">RUS RUBLESİ</option>
+                            <option value="_cin_yuan">ÇİN YUANI</option>
+                            <option value="_guneykore_won">GÜNEY KORE WONU</option>
+                            <option value="_azerbaycan_manat">AZERBAYCAN YENİ MANATI</option>
+                        </select>
+                        
+                        <br><br><br>
+                        
+                        <button type="submit" class="enter">ENTER</button>
+
+                        <br><br><hr class="line-3"><br><br>
+
+                        <label for="doviz">
+                            <input type="number" class="input1" value={{cevrilmis_kur}}>
+                        </label>
+                        <select name="doviz1" id="doviz">
+                            <option value="_tl">TÜRK LİRASI</option>
+                            <option value="_usd">ABD DOLARI</option>
+                            <option value="_avustralya_dolar">AVUSTRALYA DOLARI</option>
+                            <option value="_danimarka_kron">DANİMARKA KRONU</option>
+                            <option value="_euro">EURO</option>
+                            <option value="_sterlin">İNGİLİZ STERLİNİ</option>
+                            <option value="_frang">İSVİÇRE FRANGI</option>
+                            <option value="_isvec_kron">İSVEÇ KRONU</option>
+                            <option value="_canada_dolar">KANADA DOLARI</option>
+                            <option value="_kuveyt_dinar">KUVEYT DİNARI</option>
+                            <option value="_norvec_kron">NORVEÇ KRONU</option>
+                            <option value="_arabistan_riyal">SUUDİ ARABİSTAN RİYALİ</option>
+                            <option value="_japon_yeni">100 JAPON YENİ</option>
+                            <option value="_rus_ruble">RUS RUBLESİ</option>
+                            <option value="_cin_yuan">ÇİN YUANI</option>
+                            <option value="_guneykore_won">GÜNEY KORE WONU</option>
+                            <option value="_azerbaycan_manat">AZERBAYCAN YENİ MANATI</option>
+                        </select>
+                        <input type="submit" value="REFRESH" class="refresh">
+                    </form>
+                    <br>
+                </div>
+            </td>
+
+            <td id="doviz-2">
+                <div class="kurlar">
+                    <h1 class="t2">Doviz Kurları</h1>
+                    <hr class="line-2">
+                    <div class="doviz_kur">
+                        <div class="kur_yazi">
+                            <h3>Amerikan Doları: {{ usd }}</h3>
+                            <h3>Avustralya Doları: {{ avustralya_dolar }}</h3>
+                            <h3>Danimarka Kronu: {{ danimarka_kron }}</h3>
+                            <h3>Euro: {{ euro }}</h3>
+                            <h3>İngiliz Sterlini: {{ sterlin }}</h3>
+                            <h3>İsviçre Frangı: {{ frang }}</h3>
+                            <h3>İsveç Kronu: {{ isvec_kron }}</h3>
+                            <h3>Kanada Doları: {{ canada_dolar }}</h3>
+                            <h3>Kuveyt Dinarı: {{ kuveyt_dinar }}</h3>
+                            <h3>Norveç Kronu: {{ norvec_kron }}</h3>
+                            <h3>Arabistan Riyalı: {{ arabistan_riyal }}</h3>
+                            <h3>Rus Rublesi: {{ rus_ruble }}</h3>
+                            <h3>Çin Yuanı: {{ cin_yuan }}</h3>
+                            <h3>GüneyKore Wonu: {{ guneykore_won }}</h3>
+                            <h3>Azerbaycan Manatı: {{ azerbaycan_manat }}</h3>
+                            
+                            <h4>(Türk Lirası baz alınmıştır.)</h4>
+                        </div>
+                    </div>
+                </div>
+            </td>
+
+        </tr>
+    </table>
+
+    
+    <style>
+        body{
+            background-color: blueviolet;
+        }
+        
+        .cevirme{
+            position: relative;
+            left: 40px;
+            top: 140px;
+        }
+
+        .input1{
+            width: 120px;
+            height: 45px;
+            border-radius: 10px;
+        }
+
+        .refresh{
+            position: relative;
+            left: 110px;
+            top: 220px;
+            width: 115px;
+            height: 50px;
+            border-radius: 10px;
+        }
+
+        .enter{
+            position: relative;
+            width: 100px;
+            height: 50px;
+            border-radius: 10px;
+            left: 115px;
+        }
+
+        #doviz{
+            width: 200px;
+            height: 50px;
+            border-radius: 10px;
+        }
+
+        .t1{
+            position: relative;
+            margin-right: 500px;
+            display: inline-block;
+            background-color: rgb(183, 106, 255);
+            top: 10px;
+            width: 410px;
+            height: 600px;
+            border-radius: 10px;
+        }
+
+        .kur_yazi{
+            position: relative;
+            left: 15px;
+            top: 6px;
+            font-size: 16px;
+        }
+
+        .line-1{
+            position: relative;
+            width: 400px;
+            left: -250px;
+        }
+
+        .line-2{
+            width: 400px;
+            margin-right: 250px;
+        }
+
+        .line-3{
+            position: relative;
+            right: 40px;
+            width: 350px;
+        }
+
+        .doviz_kur{
+            background-color: rgb(183, 106, 255);
+            width: 410px;
+            height: 600px;
+            border-radius: 10px;
+        }
+
+        #doviz-1{
+            position: relative;
+            top: 65px;
+            left: 150px;
+        }
+
+        #doviz-2{
+            position: relative;
+            left: 100px;
+            top: 70px;
+        }
+        
+    </style>
+
+</body>
+</html>
