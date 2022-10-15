@@ -1,0 +1,92 @@
+body{
+    background-color: blueviolet;
+}
+
+.cevirme{
+    position: relative;
+    left: 40px;
+    top: 140px;
+}
+
+.input1{
+    width: 120px;
+    height: 45px;
+    border-radius: 10px;
+}
+
+.refresh{
+    position: relative;
+    left: 110px;
+    top: 220px;
+    width: 115px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.enter{
+    position: relative;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    left: 115px;
+}
+
+#doviz{
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.t1{
+    position: relative;
+    margin-right: 500px;
+    display: inline-block;
+    background-color: rgb(183, 106, 255);
+    top: 10px;
+    width: 410px;
+    height: 600px;
+    border-radius: 10px;
+}
+
+.kur_yazi{
+    position: relative;
+    left: 15px;
+    top: 6px;
+    font-size: 16px;
+}
+
+.line-1{
+    position: relative;
+    width: 400px;
+    left: -250px;
+}
+
+.line-2{
+    width: 400px;
+    margin-right: 250px;
+}
+
+.line-3{
+    position: relative;
+    right: 40px;
+    width: 350px;
+}
+
+.doviz_kur{
+    background-color: rgb(183, 106, 255);
+    width: 410px;
+    height: 600px;
+    border-radius: 10px;
+}
+
+#doviz-1{
+    position: relative;
+    top: 65px;
+    left: 150px;
+}
+
+#doviz-2{
+    position: relative;
+    left: 100px;
+    top: 70px;
+}
